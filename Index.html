@@ -6,6 +6,58 @@
   <title>Página de Tareas Universitarias</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa; /* Color de fondo */
+      color: #333; /* Color de texto principal */
+      padding-top: 50px; /* Espacio superior para la barra de navegación */
+    }
+
+    /* Estilos para la barra de navegación */
+    .navbar {
+      background-color: #007bff; /* Color de fondo de la barra de navegación */
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #0e0d0d !important; /* Color de texto enlaces */
+    }
+
+    /* Estilos para el contenido principal */
+    .container {
+      background-color: #fff; /* Color de fondo del contenedor principal */
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra */
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #007bff; /* Color de título */
+    }
+    p, .lead {
+      color: #555; /* Color de texto normal */
+    }
+
+    /* Estilos para las secciones de imágenes destacadas */
+    .carousel-item img {
+      border-radius: 10px; /* Bordes redondeados para las imágenes */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra */
+    }
+
+    /* Estilos para los botones */
+    .btn-primary {
+      background-color: #007bff; /* Color de fondo del botón primario */
+      border-color: #007bff; /* Color del borde del botón primario */
+    }
+    .btn-primary:hover {
+      background-color: #0056b3; /* Color de fondo al pasar el mouse sobre el botón primario */
+      border-color: #0056b3; /* Color del borde al pasar el mouse sobre el botón primario */
+    }
+
+    /* Estilos para los modales */
+    .modal-content {
+      background-color: #fff; /* Color de fondo del modal */
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra */
+    }
     .center-vertical {
       display: flex;
       align-items: center;
@@ -24,6 +76,48 @@
       display: flex;
       align-items: center;
     }
+    .col-md-4 {
+    min-height: 300px; /* Establecer una altura mínima para todas las columnas */
+  }
+  #ultimas img {
+    width: 180px; /* Ancho deseado */
+    height: 200px; /* Altura deseada */
+    object-fit: cover;
+  }
+  #destacados img {
+    width: 180px; /* Ancho deseado */
+    height: 200px; /* Altura deseada */
+    object-fit: cover;
+  }
+  .navbar {
+  background-color: #007bff; /* Color de fondo de la barra de navegación */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #1a2c5b !important; /* Color de texto enlaces */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra para el texto */
+}
+
+.navbar-toggler-icon {
+  background-color: #0f414d; /* Color del icono del botón de navegación */
+  border-radius: 2px; /* Bordes redondeados para el icono */
+}
+
+.navbar-toggler {
+  border: none; /* Quita el borde del botón de navegación */
+}
+
+/* Añade un poco de margen derecho al botón de navegación */
+.navbar-toggler {
+  margin-right: 10px;
+}
+
+/* Añade un efecto de transición suave al botón de navegación */
+.navbar-toggler:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
   </style>
 </head>
 <body>
@@ -147,8 +241,10 @@
           <img src="Ediferenciales.jpg" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 1">
         </div>
         <div class="col-md-6 center-vertical">
-          <h3>Ecuaciones Diferenciales</h3>
-          <p>Incluye libro y solucionario</p>
+          <div class="d-flex flex-column align-items-start">
+            <h3>Ecuaciones Diferenciales</h3>
+            <p>Incluye libro y solucionario</p>
+          </div>
         </div>
       </div>
       <div class="row mt-4">
@@ -156,17 +252,23 @@
           <img src="electricidad.jpg" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 2">
         </div>
         <div class="col-md-6 center-vertical">
+          <div class="d-flex flex-column align-items-start">
           <h3>Electricidad y Magnetismo</h3>
           <p> Solucionario de los problemas del Libro de Fisica Universitaria V2</p>
         </div>
+      </div>
       </div>
       <div class="row mt-4">
         <div class="col-md-6">
           <img src="progra2.png" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 3">
         </div>
         <div class="col-md-6 center-vertical">
+          <div class="d-flex flex-column align-items-start">
+         
           <h3>Programacion 2</h3>
           <p>Ejercicios de resueltos de programacion 2</p>
+        </div>
+      </div>
         </div>
       </div>
       <!-- Lista de 20 productos epara descargar -->
@@ -180,11 +282,11 @@
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Informe de laboratorio de física 1 
-    <a href="INFORME LEY DE OHM.pdf" class="btn btn-primary btn-sm" target="_blank">Descargar</a>
+    <a href="Dinamica2daleydeewton.pdf" class="btn btn-primary btn-sm" target="_blank">Descargar</a>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Informes de Electricidad y Magnetismo 
-    <a href="enlace_informes_electricidad_magnetismo.pdf" class="btn btn-primary btn-sm" target="_blank">Descargar</a>
+    <a href="INFORME LEY DE OHM.pdf" class="btn btn-primary btn-sm" target="_blank">Descargar</a>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Practicas de programación 1 
@@ -271,19 +373,19 @@
     </div>
     <div class="row mt-4">
       <div class="col-md-4 text-center">
-        <img src="casoIkea.jpg" class="img-fluid" style="max-width: 160px;" alt="Tarea 1">
+        <img src="casoIkea.jpg" class="img-fluid align-bottom" style="max-width: 180px; max-height: 200px; object-fit: cover;" alt="Tarea 1">
         <h3 class="text-center">Marketing</h3>
         <p class="text-center">-----Caso de estudio sobre IKEA----</p>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea1">VER</button>
       </div>
       <div class="col-md-4 text-center">
-        <img src="calculo1.png" class="img-fluid" style="max-width: 140px;" alt="Tarea 2">
+        <img src="calculo1.png" class="img-fluid align-bottom" style="max-width: 180px; max-height: 200px; object-fit: cover;" alt="Tarea 2">
         <h3 class="text-center">Calculo 1</h3>
-        <p class="text-center">Numeros reales / Geometria Analitica / Limites y continuidad / Derivadas</p>
+        <p class="text-center">Limites y continuidad-Derivadas-G.Analitica</p>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea2">VER</button>
       </div>
       <div class="col-md-4 text-center">
-        <img src="programacion1.jpg" class="img-fluid" style="max-width: 250px;" alt="Tarea 3">
+        <img src="programacion1.jpg" class="img-fluid align-bottom" style="max-width: 180px; max-height: 200px; object-fit: cover;" alt="Tarea 3">
         <h3 class="text-center">Programacion 2</h3>
         <p class="text-center">Diseño orientado a objetos</p>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea3">VER</button>
@@ -357,23 +459,23 @@
     <div class="text-center">
       <h2>Destacados</h2>
     </div>
-    <div class="row mt-4">
+    <div class="row mt-4 text-center">
       <div class="col-md-4">
         <img src="Redes2.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 1">
         <h3 class="text-center">Redes 2</h3>
-        <p class="text-center">Practicas y proyectos de Redes 2</p>
+        <p class="text-center">Practicas y proyectos - Redes 2</p>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado1">VER</button>
       </div>
       <div class="col-md-4">
         <img src="Empresarial.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 2">
         <h3 class="text-center">Empresarial</h3>
-        <p class="text-center">Todas las tareas pasadas de Gestion Empresarial 1, 2,3</p>
+        <p class="text-center"> Tareas pasadas de Gestion Empresarial </p>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado2">VER</button>
       </div>
       <div class="col-md-4">
         <img src="progra2.png" class="img-fluid" style="max-width: 150px;" alt="Destacado 3">
         <h3 class="text-center">Programacion 2 </h3>
-        <p class="text-center">Todos las practicas de los 3 ultimos años de programacion 2 con el magister Castro</p>
+        <p class="text-center">Practicas-programacion2 (Magister Castro) </p>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado3">VER</button>
       </div>
     </div>
