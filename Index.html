@@ -1,287 +1,365 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Tareas Universitarias</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    .center-vertical {
-      display: flex;
-      align-items: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Tareas Universitarias</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .center-vertical {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilo para todas las imágenes dentro de los carousels */
+        .carousel-item img {
+            height: 300px; /* Establece una altura específica para todas las imágenes */
+            width: auto; /* Permitir que el ancho se ajuste automáticamente para mantener la proporción */
+            display: block; /* Asegurar que la imagen sea un bloque para aplicar estilos correctamente */
+            margin: 0 auto; /* Centrar horizontalmente la imagen */
+        }
+
+        /* Establece una altura fija para los contenedores de los carousels */
+        .carousel-container {
+            height: 400px; /* Ajusta este valor según sea necesario */
+            overflow: hidden; /* Para evitar que las imágenes más grandes se desborden del contenedor */
+        }
+
+        /* Centrar verticalmente las imágenes dentro de los contenedores */
+        .carousel-inner {
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Barra de navegación -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Inicio</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link" href="#busqueda">Búsqueda de tareas</a></li>
-      <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ultimas">Últimas tareas añadidas</a></li>
-      <li class="nav-item"><a class="nav-link" href="#destacados">Destacados</a></li>
-           
-    </ul>
-  </div>
-</nav>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#busqueda">Búsqueda de tareas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ultimas">Últimas tareas añadidas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#destacados">Destacados</a></li>
 
-<!-- Contenido de la página -->
-<div class="container mt-5">
- <!-- Contenido de la página -->
-<div class="container mt-5">
-  <!-- Inicio -->
-  <section id="inicio">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="center-vertical">
-          <img src="Inge.jpg" class="img-fluid" style="max-width: 150px;" alt="Ingeniería de Sistemas">
-          <img src="Empresarial.jpg" class="img-fluid" style="max-width: 150px;" alt="Ingeniería Empresarial">
+            </ul>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="calculo1.png" class="d-block w-100" alt="...">
+    </nav>
+    <div class="container mt-3">
+        <h1 class="text-center">¡Encuentra tareas universitarias gratis!</h1>
+        <p class="lead text-center">Explora nuestra amplia colección de tareas y recursos educativos.</p>
+    </div>
+    <!-- Contenido de la página -->
+    <div class="container mt-5">
+        <!-- Contenido de la página -->
+        <div class="container mt-5">
+            <!-- Inicio -->
+            <section id="inicio">
+                <div class="row align-items-center">
+                    <div class="col-md-4 carousel-container">
+                        <div id="carouselInicio1" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="cienciasBasicas1.jpg" class="d-block w-100 img-fluid" alt="Imagen 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="cienciasBasicas2.jpg" class="d-block w-100 img-fluid" alt="Imagen 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="cienciasBasicas3.jpg" class="d-block w-100 img-fluid" alt="Imagen 3">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselInicio1" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselInicio1" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 carousel-container">
+                        <div id="carouselInicio2" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="gestionEmpresarial1.jpg" class="d-block w-100 img-fluid" alt="Imagen 4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="gestionEmpresarial2.jpg" class="d-block w-100 img-fluid" alt="Imagen 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="gestionEmpresarial3.png" class="d-block w-100 img-fluid" alt="Imagen 6">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselInicio2" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselInicio2" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 carousel-container">
+                        <div id="carouselInicio3" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="programacion1.jpg" class="d-block w-100 img-fluid" alt="Imagen 7">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="programacion2.jpg" class="d-block w-100 img-fluid" alt="Imagen 8">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="programacion3.jpg" class="d-block w-100 img-fluid" alt="Imagen 9">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselInicio3" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselInicio3" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Búsqueda de tareas -->
+        <section id="busqueda">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Búsqueda de tareas</h2>
+                    <div class="input-group mt-3 mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar tareas por nombre" aria-label="Buscar tareas por nombre" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="tareaPopular1.png" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 1">
+                    </div>
+                    <div class="col-md-6 center-vertical">
+                        <h3>Tarea Popular 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo a est ultricies convallis.</p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <img src="tareaPopular2.png" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 2">
+                    </div>
+                    <div class="col-md-6 center-vertical">
+                        <h3>Tarea Popular 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo a est ultricies convallis.</p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <img src="tareaPopular3.png" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 3">
+                    </div>
+                    <div class="col-md-6 center-vertical">
+                        <h3>Tarea Popular 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo a est ultricies convallis.</p>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-              <img src="calculo2.jpg" class="d-block w-100" alt="...">
+        </section>
+
+        <!-- Últimas tareas añadidas -->
+        <section id="ultimas">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Últimas tareas añadidas</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4 text-center">
+                        <!-- Agregado text-center -->
+                        <img src="tarea1.jpg" class="img-fluid" style="max-width: 160px;" alt="Tarea 1">
+                        <h3 class="text-center">Marketing</h3>
+                        <p class="text-center">Caso de estudio sobre IKEA</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea1">VER</button>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <!-- Agregado text-center -->
+                        <img src="calculo1.png" class="img-fluid" style="max-width: 140px;" alt="Tarea 2">
+                        <h3 class="text-center">Calculo 1</h3>
+                        <p class="text-center">Numeros reales / Geometria Analitica / Limites y continuidad / Derivadas</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea2">VER</button>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <!-- Agregado text-center -->
+                        <img src="programacion1.jpg" class="img-fluid" style="max-width: 250px;" alt="Tarea 3">
+                        <h3 class="text-center">Programacion 2</h3>
+                        <p class="text-center">Diseño orientado a objetos</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea3">VER</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+        </section>
 
-  <!-- Búsqueda de tareas -->
-  <section id="busqueda">
-    <div class="container">
-      <div class="text-center">
-        <h2>Búsqueda de tareas</h2>
-        <div class="input-group mt-3 mb-3">
-          <input type="text" class="form-control" placeholder="Buscar tareas por nombre" aria-label="Buscar tareas por nombre" aria-describedby="button-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <img src="tareaPopular1.png" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 1">
-        </div>
-        <div class="col-md-6 center-vertical">
-          <h3>Tarea Popular 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo a est ultricies convallis.</p>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-6">
-          <img src="tareaPopular2.png" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 2">
-        </div>
-        <div class="col-md-6 center-vertical">
-          <h3>Tarea Popular 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo a est ultricies convallis.</p>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-6">
-          <img src="tareaPopular3.png" class="img-fluid" style="max-width: 150px;" alt="Tarea Popular 3">
-        </div>
-        <div class="col-md-6 center-vertical">
-          <h3>Tarea Popular 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo a est ultricies convallis.</p>
-        </div>
-      </div>
+        <!-- Destacados -->
+        <section id="destacados">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Destacados</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <img src="destacados1.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 1">
+                        <h3 class="text-center">Destacado 1</h3>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado1">VER</button>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="destacados2.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 2">
+                        <h3 class="text-center">Destacado 2</h3>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado2">VER</button>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="destacados3.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 3">
+                        <h3 class="text-center">Destacado 3</h3>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado3">VER</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 
-  <!-- Últimas tareas añadidas -->
-  <section id="ultimas">
-    <div class="container">
-      <div class="text-center">
-        <h2>Últimas tareas añadidas</h2>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-4">
-          <img src="tarea1.jpg" class="img-fluid" style="max-width: 150px;" alt="Tarea 1">
-          <h3 class="text-center">Tarea 1</h3>
-          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea1">VER</button>
+    <!-- Modales de Tareas -->
+    <div class="modal fade" id="modalTarea1" tabindex="-1" role="dialog" aria-labelledby="modalTarea1Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTarea1Label">Tarea 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="CasoDeEstudio1.pdf" target="_blank">Ver PDF</a> <!-- Enlace al PDF -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-          <img src="tarea2.jpg" class="img-fluid" style="max-width: 150px;" alt="Tarea 2">
-          <h3 class="text-center">Tarea 2</h3>
-          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea2">VER</button>
+    </div>
+
+    <div class="modal fade" id="modalTarea2" tabindex="-1" role="dialog" aria-labelledby="modalTarea2Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTarea2Label">Tarea 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="Calculo1.pdf" target="_blank">Ver PDF</a> <!-- Enlace al primer PDF -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-          <img src="tarea3.jpg" class="img-fluid" style="max-width: 150px;" alt="Tarea 3">
-          <h3 class="text-center">Tarea 3</h3>
-          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalTarea3">VER</button>
+    </div>
+
+    <div class="modal fade" id="modalTarea3" tabindex="-1" role="dialog" aria-labelledby="modalTarea3Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTarea3Label">Tarea 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="ProgramacionII.pdf" target="_blank">Ver PDF</a> <!-- Enlace al primer PDF -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Destacados -->
-  <section id="destacados">
-    <div class="container">
-      <div class="text-center">
-        <h2>Destacados</h2>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-4">
-          <img src="destacados1.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 1">
-          <h3 class="text-center">Destacado 1</h3>
-          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado1">VER</button>
+
+    <!-- Modales de Destacados -->
+    <div class="modal fade" id="modalDestacado1" tabindex="-1" role="dialog" aria-labelledby="modalDestacado1Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDestacado1Label">Destacado 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Contenido del modal para el Destacado 1.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-          <img src="destacados2.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 2">
-          <h3 class="text-center">Destacado 2</h3>
-          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado2">VER</button>
+    </div>
+
+    <div class="modal fade" id="modalDestacado2" tabindex="-1" role="dialog" aria-labelledby="modalDestacado2Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDestacado2Label">Destacado 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Contenido del modal para el Destacado 2.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-          <img src="destacados3.jpg" class="img-fluid" style="max-width: 150px;" alt="Destacado 3">
-          <h3 class="text-center">Destacado 3</h3>
-          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalDestacado3">VER</button>
+    </div>
+
+    <div class="modal fade" id="modalDestacado3" tabindex="-1" role="dialog" aria-labelledby="modalDestacado3Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDestacado3Label">Destacado 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Contenido del modal para el Destacado 3.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
-</div>
 
-<!-- Modales de Tareas -->
-<div class="modal fade" id="modalTarea1" tabindex="-1" role="dialog" aria-labelledby="modalTarea1Label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTarea1Label">Tarea 1</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Contenido del modal para la Tarea 1.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modalTarea2" tabindex="-1" role="dialog" aria-labelledby="modalTarea2Label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTarea2Label">Tarea 2</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Contenido del modal para la Tarea 2.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modalTarea3" tabindex="-1" role="dialog" aria-labelledby="modalTarea3Label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTarea3Label">Tarea 3</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Contenido del modal para la Tarea 3.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modales de Destacados -->
-<div class="modal fade" id="modalDestacado1" tabindex="-1" role="dialog" aria-labelledby="modalDestacado1Label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalDestacado1Label">Destacado 1</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Contenido del modal para el Destacado 1.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modalDestacado2" tabindex="-1" role="dialog" aria-labelledby="modalDestacado2Label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalDestacado2Label">Destacado 2</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Contenido del modal para el Destacado 2.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modalDestacado3" tabindex="-1" role="dialog" aria-labelledby="modalDestacado3Label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalDestacado3Label">Destacado 3</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Contenido del modal para el Destacado 3.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Script de Bootstrap -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script de Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
